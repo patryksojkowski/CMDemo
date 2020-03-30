@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WPFUI.ViewModels
 {
-    public class FirstChildViewModel : Screen
+    public class FirstChildViewModel : Screen, IFirstChildViewModel
     {
     }
 }

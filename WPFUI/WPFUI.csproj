@@ -73,6 +73,8 @@
     </Compile>
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="ViewModels\FirstChildViewModel.cs" />
+    <Compile Include="ViewModels\IChildViewModel.cs" />
+    <Compile Include="ViewModels\ISecondChildViewModel.cs" />
     <Compile Include="ViewModels\SecondChildViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\FirstChildView.xaml.cs">

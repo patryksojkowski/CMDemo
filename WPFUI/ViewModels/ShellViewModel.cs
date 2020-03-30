@@ -15,11 +15,17 @@ namespace WPFUI.ViewModels
         private BindableCollection<PersonModel> _people = new BindableCollection<PersonModel>();
         private PersonModel _selectedPerson;
 
-        public ShellViewModel()
+        private IFirstChildViewModel _firstChild;
+        private ISecondChildViewModel _secondChild;
+
+        public ShellViewModel(IFirstChildViewModel firstChild, ISecondChildViewModel secondChild)
         {
             People.Add(new PersonModel { FirstName = "Tim", LastName = "Corey" });
             People.Add(new PersonModel { FirstName = "John", LastName = "Doe" });
             People.Add(new PersonModel { FirstName = "Anne", LastName = "Plain" });
+
+            _firstChild = firstChild;
+            _secondChild = secondChild;
         }
 
         public string FirstName
@@ -75,12 +81,12 @@ namespace WPFUI.ViewModels
 
         public void LoadPageOne()
         {
-            ActivateItem(new FirstChildViewModel());
+            ActivateItem(_firstChild);
         } 
         
         public void LoadPageTwo()
         {
-            ActivateItem(new SecondChildViewModel());
+            ActivateItem(_secondChild);
         }
     }
 }
